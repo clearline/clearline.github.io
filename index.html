@@ -1,0 +1,102 @@
+---
+page-title: Clear Line Tech
+id: index
+permalink: /
+---
+<!DOCTYPE html>
+<html>
+    {% include head.html %}
+
+    <body>
+        <header class="hero">
+            <div class="container">
+                <div class="row">
+                    <div class="title">
+                        <h1><a href="{{ site.baseurl }}/">Clear Line</a></h1>
+                    </div>
+                </div>
+
+                <div class="row">
+
+
+                    <div class="description">
+                        <p>
+                            We help organisations radically improve their
+                            web and mobile applications to unlock the
+                            potential of their product and development
+                            teams.
+                        </p>
+
+                        <div class="site-nav">
+                            <nav class="menu menu-horizontal">
+                            <ul class="menu-list">
+                                {% for page in site.pages %}
+                                    {% if page.id != "cv" and page.id != "index" and page.title %}
+                                        <li class="menu-item">
+                                            <a class="menu-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+                                        </li>
+                                    {% endif %}
+                                {% endfor %}
+                            </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </header>
+
+        <div class="page-content alt three-points">
+        <div class="container">
+            <div class="row">
+                <div class="one-third column">
+                    {% include icon-multi-platform.svg %}
+                    <h4>Modern</h3>
+                    <p>
+
+                        Web and mobile technology moves very fast.
+                        Mobile, wearables, Internet-of-things, messaging
+                        platforms, big data. Make sure you're investing
+                        in the right areas.
+
+                    </p>
+                </div>
+
+                <div class="one-third column">
+                    {% include icon-robot.svg %}
+                    <h4>Agile</h3>
+                    <p>
+
+                        Your software needs to be able to adapt for the
+                        future of your business.  Improve existing
+                        codebases and build new systems that won't get
+                        stuck in the past.
+
+                    </p>
+                </div>
+
+                <div class="one-third column">
+                    {% include icon-crystal-ball.svg %}
+                    <h4>Innovative</h3>
+                    <p>
+
+                        How can your business make the most of technology?
+
+                    </p>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="page-content">
+        <div class="container">
+            <h3>Blog</h3>
+            {% include post-list.html %}
+        </div>
+        </div>
+
+        {% include footer.html %}
+
+    </body>
+
+</html>

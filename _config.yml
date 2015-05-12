@@ -1,0 +1,16 @@
+# Site settings
+#source: .
+title: clearlinetech.com
+email: hello@clearlinetech.com
+description: > # this means to ignore newlines until "baseurl:"
+  We help organisations radically improve their web and mobile applications.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://clearlinetech.com" # the base hostname & protocol for your site
+twitter_username: clearlinetech
+github_username:  clearline
+
+exclude: [vendor, bin]
+
+# Build settings
+markdown: kramdown
+permalink: pretty
