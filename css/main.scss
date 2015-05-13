@@ -75,7 +75,7 @@ body {
     padding: 48px 0 55px 0;
 }
 .page-header {
-    padding: 48px 0 45px 0;
+    padding: 38px 0 35px 0;
 }
 
 // Typography
@@ -150,13 +150,49 @@ a {
 
 
 // big image index page
+
 .hero {
-    background: url(/img/space.jpg) no-repeat center center fixed; 
+    background-color:  $c-black; 
+    background-repeat:  no-repeat; 
+    background-position:  center top; 
+    // background-attachment:  fixed; 
+
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    min-height: 650px;
+
+    background-image: url(/img/space-400x469.jpg); 
+
+    /* Larger than mobile */
+    @media (min-width: 400px) {
+        background-image: url(/img/space-550x372.jpg); 
+        min-height: 372px;
+    }
+
+    /* Larger than phablet */
+    @media (min-width: 550px) {
+        background-image: url(/img/space-750x507.jpg); 
+        min-height: 550px;
+    }
+
+    /* Larger than tablet */
+    @media (min-width: 750px) {
+        background-image: url(/img/space-1000x677.jpg); 
+        min-height: 650px;
+    }
+
+    /* Larger than desktop */
+    @media (min-width: 1000px) {
+        background-image: url(/img/space-1200x812.jpg); 
+        min-height: 650px;
+    }
+
+    /* Larger than Desktop HD */
+    @media (min-width: 1200px) {
+        background-image: url(/img/space-1920x1299.jpg); 
+        min-height: 650px;
+    }
 
     .topline {
         min-height: 40px;
@@ -170,7 +206,6 @@ a {
     }
 
     .site-nav {
-        float: right;
         line-height: 40px;
         a {
             font-weight: 400;
@@ -180,19 +215,28 @@ a {
                 color: $c-primary;
             }
         }
+
+        text-align: center;
+
+        /* Larger than phablet */
+        @media (min-width: 550px) {
+            float: right;
+        }
     }
 
     .title {
-        border-left: 15px solid $c-accent;
         margin-top: 40px;
         margin-bottom: 25px;
+
+        /* Larger than mobile */
+        @media (min-width: 400px) {
+            border-left: 15px solid $c-accent;
+        }
+
         h1 {
             font-size: 4.4em;
             text-align: left;
-            display: inline;
-            background-color: $c-grey-dark;
             padding: 0px 15px;
-            padding-left: 80px;
             a {
                 color: $c-text-light-on-dark-primary;
                 &:hover {
@@ -201,19 +245,46 @@ a {
                 text-shadow: 2px 2px 1px rgba(0,0,0,0.3);
                 text-decoration: none;
             }
+
+            /* Larger than mobile */
+            @media (min-width: 400px) {
+                background-color: $c-grey-dark;
+                box-shadow: 1px 1px 0px rgba(0,0,0,0.6);
+            }
+            /* Larger than phablet */
+            @media (min-width: 550px) {
+                display: inline;
+            }
+            /* Larger than tablet */
+            @media (min-width: 750px) {
+                padding-left: 80px;
+            }
         }
     }
     .description {
         max-width: 30em;
-        border-left: 15px solid $c-accent;
-        background-color: $c-grey-dark;
         padding: 10px 15px 15px 15px;
-        padding-left: 80px;
 
         p {
             color: $c-text-light-on-dark-secondary;
             font-size: 1.3em;
             margin-bottom: 0;
+        }
+
+        background-color: rgba(0,0,0,0.7);
+
+        /* Larger than mobile */
+        @media (min-width: 400px) {
+            border-left: 15px solid $c-accent;
+            background-color: $c-grey-dark;
+            box-shadow: 1px 1px 0px rgba(0,0,0,0.6);
+        }
+        /* Larger than phablet */
+        @media (min-width: 550px) {
+        }
+        /* Larger than tablet */
+        @media (min-width: 750px) {
+            padding-left: 80px;
         }
     }
 }
@@ -222,7 +293,7 @@ a {
     text-align: center;
     svg {
         polygon, polyline, rect, line {
-            stroke: $c-accent-light !important;
+            stroke: $c-primary-light !important;
         }
         width: 64px;
         height: 64px;
@@ -231,11 +302,54 @@ a {
 
 // header
 .page-header {
+    background-color:  $c-black; 
+    background-repeat:  no-repeat; 
+    background-position:  center top; 
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    background-image: url(/img/space2-400x344.jpg); 
+
+    /* Larger than mobile */
+    @media (min-width: 400px) {
+        background-image: url(/img/space2-550x166.jpg); 
+    }
+
+    /* Larger than phablet */
+    @media (min-width: 550px) {
+        background-image: url(/img/space2-750x166.jpg); 
+    }
+
+    /* Larger than tablet */
+    @media (min-width: 750px) {
+        background-image: url(/img/space2-1000x166.jpg); 
+    }
+
+    /* Larger than desktop */
+    @media (min-width: 1000px) {
+        background-image: url(/img/space2-1200x129.jpg); 
+    }
+
+    /* Larger than Desktop HD */
+    @media (min-width: 1200px) {
+        background-image: url(/img/space2-1920x207.jpg); 
+    }
+
+    .container {
+        background-color: rgba(0,0,0,0.8);
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
     h1 {
-        // letter-spacing: 5px;
+        letter-spacing: 3px;
         font-size: 28px;
         text-align: center;
         a {
+            color: $c-text-light-on-dark-primary;
             text-decoration: none;
         }
         margin-bottom: 3px;
@@ -260,6 +374,7 @@ a {
             padding-right: 10px;
         }
         li:not(:last-child) a:after {
+            color: $c-accent;
             content: '·';
             display: inline-block;
             padding-left: 20px;
