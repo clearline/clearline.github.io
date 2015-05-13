@@ -7,6 +7,9 @@ permalink: /contact/
 
 ## Contact Us
 
+Please get in touch, we're always happy to hear from organisations or
+individuals who are doing interesting things.
+
 
 <dl class="dl-horizontal">
     <dt>Email</dt>
@@ -18,16 +21,6 @@ permalink: /contact/
     <dt>Telephone</dt>
     <dd>
     <p class="tel fixed-numbers">+44 (0)744 627 0970</p>
-    </dd>
-
-    <dt>Post</dt>
-    <dd>
-    <div class="adr">
-    <p><span class="street-address">Flat 2, 41 Russell Rd.</span></p>
-    <p><span class="extended-address">Kensington</span></p>
-    <p><span class="locality">London</span>, <span class="country-name">England</span></p>
-    <p><span class="postal-code">W14 8HT</span></p>
-    </div>
     </dd>
 </dl>
 
