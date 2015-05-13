@@ -8,7 +8,7 @@ $base-font-family: 'Istok Web', 'Helvetica Neue', 'Calibri', Arial, sans-serif;
 $base-font-weight: 400;
 $base-bold-font-weight: 700;
 
-$monospace-font-family: 'Inconsolata', 'Courier New', monospace;
+$monospace-font-family: 'Ubuntu Mono', 'Courier New', monospace;
 $monospace-font-weight: 400;
 
 $header-font-family: 'Montserrat', 'Helvetica Neue', 'Calibri', Arial, sans-serif;
@@ -23,6 +23,7 @@ $menu-font-weight: 600;
 // local imports
 @import 'lists';
 @import 'menus';
+@import 'syntax-highlighting';
 
 // colors
 $c-white: #FFFFFF;
@@ -93,6 +94,9 @@ h1, h2, h3, h4, h5 {
 .menu {
     font-family: $menu-font-family;
     font-weight: $menu-font-weight;
+}
+code, kbd, samp , pre, xmp, plaintext, listing {
+    font-family: $monospace-font-family;
 }
 
 
@@ -210,9 +214,9 @@ a {
         a {
             font-weight: 400;
             text-transform: uppercase;
-            color: $c-primary-light;
+            color: $c-accent-light;
             &:hover {
-                color: $c-primary;
+                color: $c-accent;
             }
         }
 
@@ -366,19 +370,38 @@ a {
         a {
             font-weight: 400;
             text-transform: uppercase;
-            font-size: 18px;
             &:hover {
                 text-decoration: underline;
             }
-            padding-left: 10px;
-            padding-right: 10px;
+
+            font-size: 13px;
+            padding-left: 3px;
+            padding-right: 3px;
+
+            /* Larger than phablet */
+            @media (min-width: 550px) {
+                font-size: 16px;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
         }
         li:not(:last-child) a:after {
             color: $c-accent;
-            content: '·';
+            content: '/';
             display: inline-block;
-            padding-left: 20px;
             font-style: normal;
+
+            padding-left: 6px;
+
+            /* Larger than mobile */
+            @media (min-width: 400px) {
+            }
+
+            /* Larger than phablet */
+            @media (min-width: 550px) {
+                padding-left: 20px;
+            }
         }
     }
 }
@@ -386,6 +409,7 @@ a {
 // footer
 .page-footer {
     .footer-heading {
+        overflow: hidden;
         text-align: center;
         a {
             text-decoration: none;
