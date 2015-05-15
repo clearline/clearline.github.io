@@ -14,8 +14,8 @@ $monospace-font-weight: 400;
 $header-font-family: 'Montserrat', 'Helvetica Neue', 'Calibri', Arial, sans-serif;
 $header-font-weight: 700;
 
-$menu-font-family: $header-font-family;
-$menu-font-weight: 600;
+$site-nav-font-family: $header-font-family;
+$site-nav-font-weight: 700;
 
 // skeleton css base
 @import 'vendors/skeleton';
@@ -91,9 +91,9 @@ h1, h2, h3, h4, h5 {
     font-weight: $header-font-weight;
     text-transform: uppercase;
 }
-.menu {
-    font-family: $menu-font-family;
-    font-weight: $menu-font-weight;
+.site-nav {
+    font-family: $site-nav-font-family;
+    font-weight: $site-nav-font-weight;
 }
 code, kbd, samp , pre, xmp, plaintext, listing {
     font-family: $monospace-font-family;
@@ -175,12 +175,14 @@ a {
     @media (min-width: 400px) {
         background-image: url(/img/space-550x372.jpg); 
         min-height: 372px;
+        padding-bottom: 25px;
     }
 
     /* Larger than phablet */
     @media (min-width: 550px) {
         background-image: url(/img/space-750x507.jpg); 
         min-height: 550px;
+        padding-bottom: 0;
     }
 
     /* Larger than tablet */
@@ -260,11 +262,12 @@ a {
 
             /* Larger than mobile */
             @media (min-width: 400px) {
-                background-color: $c-grey-dark;
+                background-color: rgba(0,0,0,0.7);
                 box-shadow: 1px 1px 0px rgba(0,0,0,0.6);
             }
             /* Larger than phablet */
             @media (min-width: 550px) {
+                background-color: $c-grey-dark;
                 display: inline;
             }
             /* Larger than tablet */
@@ -288,11 +291,12 @@ a {
         /* Larger than mobile */
         @media (min-width: 400px) {
             border-left: 15px solid $c-accent;
-            background-color: $c-grey-dark;
+            background-color: rgba(0,0,0,0.7);
             box-shadow: 1px 1px 0px rgba(0,0,0,0.6);
         }
         /* Larger than phablet */
         @media (min-width: 550px) {
+            background-color: $c-grey-dark;
         }
         /* Larger than tablet */
         @media (min-width: 750px) {
@@ -429,21 +433,25 @@ a {
     }
     .footer-description {
         text-align: center;
+        color:  $c-text-dark-on-light-secondary;
     }
     .columns {
         margin-bottom: 36px;
     }
-    .site-nav {
-        text-align: center;
-        text-transform: uppercase;
-    }
     .menu {
         a {
             font-weight: 400;
-            color:  $c-text-dark-on-light-secondary;
+            color:  $c-text-dark-on-light-primary;
             &:hover {
                 color: $c-primary-light;
             }
+        }
+    }
+    .site-nav {
+        text-align: center;
+        text-transform: uppercase;
+        a {
+            color:  $c-text-dark-on-light-secondary;
         }
     }
     .crystal-ball {
