@@ -3,7 +3,7 @@
 title: Clear Line Tech
 email: saul@saulhoward.com
 description: > # this means to ignore newlines until "baseurl:"
-  We help organisations radically improve their web and mobile apps using modern web technology
+  We help organisations radically improve their software stack
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://clearlinetech.com" # the base hostname & protocol for your site
 twitter_username: saulhoward
@@ -12,6 +12,9 @@ github_username:  clearline
 exclude: [vendor, bin]
 
 # Build settings
-markdown: redcarpet
 permalink: pretty
-highlighter: pygments
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
