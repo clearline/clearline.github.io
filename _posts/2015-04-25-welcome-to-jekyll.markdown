@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "Welcome to Clear Line Tech!"
 date:   2015-04-25 10:55:15
 categories: jekyll update
 excerpt: A little excerpt goes here
